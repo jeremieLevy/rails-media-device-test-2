@@ -1,14 +1,30 @@
-<div class="container d-flex flex-column text-center ">
-  <h1>Cameras</h1>
-  
-  <div id="cameras">
-    <% @cameras.each do |camera| %>
-      <%= render camera %>
-      <p>
-        <%= link_to "Show this camera", camera %>
-      </p>
-    <% end %>
-  </div>
+<div class="container d-flex flex-column align-items-center" data-controller="camera" >
 
-  <%= link_to "New camera", new_camera_path %>
+  <video data-camera-target="video" autoplay></video>
+  <br>
+  <button data-action="click->camera#startCamera">Camera</button>
+
 </div>
+
+
+
+
+
+
+
+
+
+
+
+<!--  <h1>Cameras</h1>
+
+  <div id="cameras">
+    <%# @cameras.each do |camera| %>-->
+      <%#= render camera %>
+<!--      <p>-->
+        <%#= link_to "Show this camera", camera %>
+<!--      </p>-->
+    <%# end %>
+<!--  </div>
+
+  <%#= link_to "New camera", new_camera_path %>-->
