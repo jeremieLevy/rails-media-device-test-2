@@ -5,10 +5,6 @@ export default class extends Controller {
 
   connect() {
     console.log("Camera controller connected");
-  }
-
-  startCamera() {
-    console.log("Hello")
     const constraints = {
       audio: false,
       video: {
@@ -24,5 +20,23 @@ export default class extends Controller {
       .catch((err) => {
         console.error("Error accessing camera: ", err);
       });
+  }
+
+  startCamera() {
+    // const constraints = {
+    //   audio: false,
+    //   video: {
+    //     facingMode: 'environment'
+    //   }
+    // };
+
+    // navigator.mediaDevices.getUserMedia(constraints)
+    //   .then((stream) => {
+    //     this.videoTarget.srcObject = stream;
+    //     this.videoTarget.play();
+    //   })
+    //   .catch((err) => {
+    //     console.error("Error accessing camera: ", err);
+    //   });
   }
 }
